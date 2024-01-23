@@ -23,6 +23,7 @@
     "eject": "react-scripts eject"
   },
   "proxy": "https://port-0-ffxiv-server-o0ynn2alrqjnqex.sel5.cloudtype.app/",
+  "homepage": "https://port-0-ffxiv-server-o0ynn2alrqjnqex.sel5.cloudtype.app/",
   "eslintConfig": {
     "extends": [
       "react-app",
