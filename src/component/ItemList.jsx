@@ -80,6 +80,7 @@ function ItemList() {
   const [items, setItems] = useState([]); // API에서 가져온 아이템 목록
   const [filteredItems, setFilteredItems] = useState([]); // 필터링된 아이템 목록
   const [category, setCategory] = useState(''); // 선택된 카테고리
+  const BackURL = process.env.REACT_APP_URL;
 
   // 아이템명 입력값이 변경될 때 호출되는 함수
   const handleChange = (e) => {
@@ -96,7 +97,7 @@ function ItemList() {
   // 아이템을 검색하는 API를 호출하는 함수
   const getApi = async () => {
     // API 엔드포인트에 GET 요청
-    axios.get(`http://localhost:5001?itemName=${itemName}`)
+    axios.get(`${BackURL}?itemName=${itemName}`)
       .then((res) => { //응답 데이터 처리.
         const data = res.data.items;
         setItems(data); // API에서 가져온 아이템 목록 업데이트
